@@ -18,7 +18,12 @@ An interactive and fun general knowledge quiz application built using **HTML**, 
 
 ## 📷 Screenshots
 
-> Add screenshots here (optional)
+> ![image](https://github.com/user-attachments/assets/ca1ff819-6975-40dd-bb07-367e4ef6d75c)
+> ![image](https://github.com/user-attachments/assets/ab4b1c23-b520-4a77-b311-a4f0df1bd5ea)
+> ![image](https://github.com/user-attachments/assets/72c1fc55-bf44-4893-8215-cb424979b88d)
+
+
+
 
 ---
 
