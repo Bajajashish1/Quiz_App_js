@@ -1,0 +1,312 @@
+/* Main container for the quiz app */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/* Header styling */
+.quiz-header {
+  background-color: #d88511ec;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 840px;
+  border-radius: 10px 10px 0 0;
+}
+
+.quiz-title {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.quiz-subtitle {
+  color: #f0c674;
+  font-size: 1.2rem;
+  margin: 10px 0 0 0;
+}
+
+/* Main content area */
+.quiz-content {
+  background-color: white;
+  padding: 40px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Logo styling */
+.quiz-logo {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Welcome text */
+.welcome-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Name input container */
+.name-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-input {
+  flex: 1;
+  max-width: 300px;
+  padding: 12px;
+  border: 2px solid #0d190e;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.start-button {
+  background-color: lightgray;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: skyblue;
+}
+
+/* Timer info */
+.timer-info {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Topic selection */
+.topic-selection-text {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Category buttons container - THIS IS THE KEY PART */
+.category-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individual category buttons */
+.category-button {
+  background-color: skyblue;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.category-button:active {
+  transform: translateY(0);
+}
+
+/* Option buttons styling */
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#answers button {
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+#answers button:hover:not(:disabled) {
+  background: #e0e0e0;
+  color: #007bff;
+}
+
+#answers button.correct {
+  background: #4caf50 !important;
+  color: #fff !important;
+}
+
+#answers button.incorrect {
+  background: #f44336 !important;
+  color: #fff !important;
+}
+
+/* Align timer, score, and next button to the left */
+#score, #timer, #nextBtn {
+  display: inline-block;
+  margin-right: 18px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+#score, #timer {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+#nextBtn {
+  padding: 8px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#nextBtn:hover {
+  background: #0056b3;
+}
+
+/* Optional: Add some spacing to the quiz container */
+#quiz-container {
+  padding: 32px 24px;
+  max-width: 600px;
+  margin: 32px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 10px;
+  }
+  
+  .quiz-content {
+    padding: 20px;
+  }
+  
+  .category-grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+  
+  .name-input-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .name-input {
+    max-width: 100%;
+  }
+}
+
+/* Alternative layout for 2x2 grid on larger screens */
+@media (min-width: 768px) {
+  .category-grid {
+    max-width: 600px;
+  }
+}
+
+#question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Add to your CSS file or <style> tag */
+.correct {
+  background-color: #4CAF50 !important; /* Green */
+  color: #fff;
+}
+.incorrect {
+  background-color: #f44336 !important; /* Red */
+  color: #fff;
+}
+
+.quiz-over-container {
+  background: #f8fafc;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 36px 24px;
+  text-align: center;
+  margin: 40px auto;
+  max-width: 420px;
+}
+
+.quiz-over-title {
+  color: #007bff;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.quiz-over-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.quiz-over-score, .quiz-over-time {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.quiz-over-score span, .quiz-over-time span, .quiz-over-name span {
+  color: #4caf50;
+  font-weight: 600;
+}
+
+.quiz-over-thought {
+  margin-top: 24px;
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 16px;
+}

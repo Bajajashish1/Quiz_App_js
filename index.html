@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizApp</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="quiz-container" id="quiz-container">
+    <div class="quiz-header">
+      <h1 class="quiz-title">QuizApp</h1>
+      <p class="quiz-subtitle">Let's Test your knowledge!!</p>
+    </div>
+
+    <div class="quiz-content">
+      <!-- <img src="./logo.png" alt="QuizApp Logo" class="quiz-logo"> -->
+
+      <p class="welcome-text">Welcome to the QuizApp! Please enter your name to start.</p>
+
+      <div class="name-input-container">
+        <input type="text" id="name" class="name-input" placeholder="Enter your name" required>
+        <button class="start-button" onclick="getName()">Start Quiz</button>
+      </div>
+
+      <p class="timer-info">You'll have 20 seconds to answer each question</p>
+
+      <p class="topic-selection-text">Please select a topic to begin the quiz.</p>
+
+      <div class="category-grid">
+        <button onclick="startQuiz(event)" class="category-button" value="india">INDIA</button>
+        <button onclick="startQuiz(event)" class="category-button" value="china">CHINA</button>
+        <button onclick="startQuiz(event)" class="category-button" value="america">AMERICA</button>
+        <button onclick="startQuiz(event)" class="category-button" value="dubai">DUBAI</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts.js"></script>
+</body>
+</html>
